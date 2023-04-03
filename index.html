@@ -1,47 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Craigslist Page</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f6f6f6;
-        margin: 0;
-        padding: 0;
-      }
-      header {
-        background-color: #006699;
-        color: #fff;
-        padding: 10px;
-      }
-      nav {
-        background-color: #ccc;
-        padding: 10px;
-        overflow: hidden;
-      }
-      nav a {
-        display: block;
-        float: left;
-        color: #333;
-        text-decoration: none;
-        padding: 10px;
-      }
-      nav a:hover {
-        background-color: #fff;
-      }
-      section {
-        margin: 20px;
-        padding: 20px;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      }
-      footer {
-        background-color: #ccc;
-        color: #333;
-        text-align: center;
-        padding: 10px;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <header>
@@ -53,15 +17,149 @@
       <a href="#">Jobs</a>
       <a href="#">Housing</a>
       <a href="#">Services</a>
+      <form class="search-form">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+      </form>
+      <div class="login-register">
+        <a class= "login" href="#">Login</a>
+        <a class="register" href="#">Register</a>
+      </div>
     </nav>
-    <section>
-      <h2>Latest Listings</h2>
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-      </ul>
-    </section>
+    
+    
+    <div class="main">
+      <section>
+        <div class="content">
+          <div class="box">
+            <h2>Box 1</h2>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+              <li>Item 5</li>
+              <li>Item 6</li>
+              <li>Item 7</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h2>Box 2</h2>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+              <li>Item 5</li>
+              <li>Item 6</li>
+              <li>Item 7</li>
+              <li>Item 8</li>
+              <li>Item 9</li>
+              <li>Item 10</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h2>Box 3</h2>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+              <li>Item 5</li>
+              <li>Item 6</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h2>Box 4</h2>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+              <li>Item 5</li>
+              <li>Item 6</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h2>Box 2</h2>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+              <li>Item 5</li>
+              <li>Item 6</li>
+              <li>Item 7</li>
+              <li>Item 8</li>
+              <li>Item 9</li>
+              <li>Item 10</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <aside>
+        <div class="right-sidebar">
+          <div class="country-list">
+            <h3>Countries</h3>
+            <div class="country-dropdown">
+              <select>
+                <option value="">Select a country</option>
+                <option value="australia">Australia</option>
+                <option value="brazil">Brazil</option>
+                <option value="canada">Canada</option>
+                <option value="china">China</option>
+                <option value="egypt">Egypt</option>
+                <option value="france">France</option>
+                <option value="germany">Germany</option>
+                <option value="india">India</option>
+                <option value="italy">Italy</option>
+                <option value="japan">Japan</option>
+                <option value="mexico">Mexico</option>
+                <option value="netherlands">Netherlands</option>
+                <option value="new zealand">New Zealand</option>
+                <option value="russia">Russia</option>
+                <option value="spain">Spain</option>
+                <option value="switzerland">Switzerland</option>
+                <option value="thailand">Thailand</option>
+                <option value="united kingdom">United Kingdom</option>
+                <option value="united states">United States</option>
+              </select>
+            </div>
+            <ul>
+              <li><a href="#">World Wide</a></li>
+              <li><a href="#">Europe</a></li>
+              <li><a href="#">North-America</a></li>
+              <li><a href="#">South-America</a></li>
+              <li><a href="#">Africa</a></li>
+              <li><a href="#">Asia</a></li>
+              <li><a href="#">Austrailia</a></li>
+            </ul>
+          </div>
+        </div>
+        
+      </aside>
+      <aside class="left-aside">
+        <div class="calander">
+        <iframe src="https://calendar.google.com/calendar/embed?height=200&wkst=2&bgcolor=%23039BE5&ctz=Europe%2FOslo&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&showDate=1&src=YWY3ZDcwMTkxNzAzZmE0YmE5ZWZlNTdiNjg5NDgxZTA4ODEyNTQ1NzRiOWMwNGU1MzZlNWJjNmZlNmNhYTg1NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%233F51B5" style="border-width:0" width="157" height="250" frameborder="0" scrolling="no"></iframe>
+      </div>
+        <ul>
+          <li><a href="#">help, faq, abuse, legal</a></li>
+          <li><a href="#">avoid scams & fraud</a></li>
+          <li><a href="#">personal safety tips</a></li>
+          <li><a href="#">terms of use</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">system status</a></li>
+          <br>
+          <li><a href="#">about craigslist</a></li>
+          <li><a href="#">craigslist open source</a></li>
+          <li><a href="#">craigslist blog</a></li>
+          <li><a href="#">best-of-craigslist</a></li>
+          <li><a href="#">"craigslist joe"</a></li>
+          <li><a href="#">craig newmark</a></li>
+          <li><a href="#">philanthropies</a></li>
+        </ul>
+      </aside>
+    </div>
     <footer>
       &copy; My Craigslist Page 2023
     </footer>
