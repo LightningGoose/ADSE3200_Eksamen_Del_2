@@ -269,4 +269,10 @@ nav > div.login-register {
 
 
 
-  
+  .box1 {
+    width: 150px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.466);
+    display: block;
+    margin-bottom: 10%;
+  }
