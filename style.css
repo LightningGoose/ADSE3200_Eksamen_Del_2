@@ -85,22 +85,6 @@ nav > div.login-register {
   }
   
   
-/* Main container styles */
-.main {
-    display: flex;
-    margin: 20px;
-  }
-  
-  /* Main content styles */
-  .main section {
-    flex: 1;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    padding: 20px;
-    margin-left: 3%;
-    margin-right: 3%;
-  }
-  
   /* Left sidebar styles */
   .left-aside {
     order: -1;
@@ -164,7 +148,22 @@ nav > div.login-register {
     font-size: 14px;
     background-color: #f5f5f5;
   }
-  
+
+  /* Main container styles */
+.main {
+  display: flex;
+  margin: 20px;
+}
+
+.main section {
+  flex: 1;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  padding: 20px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
   .content {
     display: flex;
     justify-content: space-between;
@@ -205,6 +204,7 @@ nav > div.login-register {
     box-sizing: border-box;
     border-bottom: 1px solid #ddd;
   }
+
   
   @media (min-width: 768px) {
     .content .box {
