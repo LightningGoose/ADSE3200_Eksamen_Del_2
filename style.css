@@ -205,6 +205,10 @@ nav > div.login-register {
     border-bottom: 1px solid #ddd;
   }
 
+  .box img {
+    width: 100%;
+    max-width: 1000px;
+  }
   
   @media (min-width: 768px) {
     .content .box {
