@@ -24,12 +24,15 @@
   }
   
 /* Navigation styles */
+/* Navigation styles */
 nav {
-    background-color: #ffffff;
-    padding: 10px;
-    overflow: hidden;
-    text-align: center;
-  }
+  background-color: #ffffff;
+  padding: 10px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
   
   nav a {
     display: inline-block;
@@ -44,46 +47,51 @@ nav {
   
 /* Login and Register buttons */
 nav > div.login-register {
-    float: right;
-  }
+  float: right;
+  margin-left: 10px;
+}
+
+nav > div.login-register a {
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
   
-  nav > div.login-register a {
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    margin-left: 10px;
-  }
-  
-  nav > div.login-register a:hover {
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #333;
-  }
+}
+
+nav > div.login-register a:hover {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+}
 
   
 
 
-  /* Search form styles */
+/* Search form styles */
 .search-form {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  .search-form input[type="text"] {
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  .search-form button[type="submit"] {
-    background-color: #006699;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    font-size: 14px;
-    cursor: pointer;
-  }
+  display: inline-block;
+  
+  flex-grow: 1;
+}
+.search-form input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 70%;
+  margin: 0;
+}
+.search-form button[type="submit"] {
+  background-color: #006699;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0;
+}
   
   
   /* Left sidebar styles */
@@ -92,6 +100,7 @@ nav > div.login-register {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     padding: 20px;
+    width: 200px;
   }
 
   .calander {
@@ -112,11 +121,11 @@ nav > div.login-register {
   
   /* Right sidebar styles */
   .right-sidebar {
-    order: 2;
-    float: right;
+    order: 1;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     padding: 20px;
+    width: 200px;
   }
   
   .country-list {
@@ -158,6 +167,7 @@ nav > div.login-register {
 
 .main section {
   flex: 1;
+  order: 0;
   background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   padding: 20px;
@@ -247,6 +257,19 @@ nav > div.login-register {
     footer {
       grid-template-columns: 1fr;
     }
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .search-form {
+      margin: 0;
+      width: 100%;
+    }
+  
+    nav > div.login-register {
+      margin-top: 20px;
+    }
   }
   
 
@@ -289,15 +312,3 @@ footer {
   text-align: center;
   width: 100%;
 }
-
-  
-
-
-
-  .box1 {
-    width: 150px;
-    height: 100px;
-    background-color: rgba(0, 0, 0, 0.466);
-    display: block;
-    margin-bottom: 10%;
-  }
