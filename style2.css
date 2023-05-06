@@ -21,84 +21,96 @@
     border: solid black;
   }
   
-  /* Header styles */
-  header {
+/* Header styles */
+header {
     background-color: #006699;
     color: #fff;
     padding: 10px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add this line */
+  }
+  
+  .header-left {
+    margin-right: auto;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  /* Navigation styles */
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Search form styles */
+.search-form {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Add this line */
+  }
+  
+  .search-form input[type="text"] {
+    padding: 10px;
+    border: solid #333 2px 2px 2px 2px;
+    border-radius: 15px 0px 0px 15px;
+    font-size: 14px;
+    width: 70%;
+  }
+  
+  .search-form button[type="submit"] {
+    background-color: #006699;
+    color: #fff;
+    border: solid #333 2px;
+    border-radius: 0px 15px 15px 0px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
     
   }
   
-/* Navigation styles */
-/* Navigation styles */
-nav {
-  background-color: #ffffff;
-  padding: 20px;
-  overflow: hidden;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  border-bottom: solid black;
-}
+  /* Login and Register buttons */
+  nav > .login-register {
+    margin-left: 10px;
+    margin-right: 0; /* Add this line */
+  }
   
-  nav a {
-    display: inline-block;
-    color: #333;
-    text-decoration: none;
+  nav > .login-register a {
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
     padding: 10px;
+    text-decoration: none;
   }
   
-  nav a:hover {
+  nav > .login-register a:hover {
     background-color: #fff;
+    color: #333;
+    border: none;
   }
   
-/* Login and Register buttons */
-nav > div.login-register {
-  float: right;
-  margin-left: 10px;
-}
-
-nav > div.login-register a {
-  background-color: #333;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px;
+  /* Login and Register buttons */
+  nav > .login-register {
+    margin-left: 10px;
+  }
   
-}
-
-nav > div.login-register a:hover {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #333;
-}
-
+  nav > .login-register a {
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+  }
   
-
-
-/* Search form styles */
-.search-form {
-  display: inline-block;
-  flex-grow: 1;
-}
-.search-form input[type="text"] {
-  padding: 10px;
-  border: solid #333 2px;
-  border-radius: 5px;
-  font-size: 14px;
-  width: 70%;
-  margin: 0;
-}
-.search-form button[type="submit"] {
-  background-color: #006699;
-  color: #fff;
-  border: solid #333 2px;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  margin: 0;
-}
+  nav > .login-register a:hover {
+    background-color: #fff;
+    color: #333;
+    border: none;
+  }
   
   
   /* Left sidebar styles */
@@ -198,7 +210,6 @@ nav > div.login-register a:hover {
 
 .category {
     flex: 1;
-    background-color: lightblue;
     padding: 10px;
     margin-right: 10px;
     margin-bottom: 10px; /* Add margin-bottom for spacing */
@@ -234,6 +245,8 @@ nav > div.login-register a:hover {
     max-height: 100%;
     object-fit: contain;
     margin-bottom: 10px;
+    border-radius: 30px;
+    border: solid black 4px;
 }
 
 .hidden {
@@ -255,7 +268,7 @@ nav > div.login-register a:hover {
     width: 100%;
     max-width: 680px; /* Adjust the maximum width as needed */
     list-style: none;
-    padding: 0; /* Remove any default padding */
+    padding-left: 0px; /* Remove any default padding */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -325,25 +338,6 @@ footer {
     width: 100%;
   }
 
-
-  
-/* Style for bigger screens */
-@media (min-width: 768px) {
-    .content .box {
-      flex-grow: 1;
-      margin-right: 20px;
-      max-width: 500px;
-    }
-    
-    .main {
-      justify-content: center;
-    }
-    
-    /* Show the list container */
-    #list-container.hidden {
-      display: block;
-    }
-  }
   
   /* Style for smaller screens */
   @media (max-width: 767px) {
@@ -364,9 +358,8 @@ footer {
     
     .box h2 {
       width: 100%;
+      font-size: 14px; /* Adjusted font size for smaller screens */
     }
-    
-
 
     .right-sidebar #list-container {
         display: none;
@@ -376,15 +369,6 @@ footer {
       grid-template-columns: 1fr;
     }
     
-    nav {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .search-form {
-      margin: 0;
-      width: 100%;
-    }
     
     nav > div.login-register {
       margin-top: 20px;
@@ -411,6 +395,7 @@ footer {
     .main {
       justify-content: flex-start;
       flex-direction: column;
+      display: flex;
     }
     
     /* Adjust the width of the main content */
@@ -425,22 +410,23 @@ footer {
     
     
     /* Show the list container */
-    #list-container.hidden {
+    .hidden {
       display: block;
+      justify-content: center;
     }
     
     /* Show the list */
-    #list-container.hidden ul {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Display list items in 2 columns */
-      grid-gap: 20px; /* Add gap between list items */
-    }
-    
-    /* Adjust the width of the list items */
-    #list-container.hidden li {
-      flex-basis: initial;
-      margin-bottom: 0;
-    }
+    .hidden ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    grid-gap: 20px;
+  }
+  
+  .hidden li {
+    margin: 0;
+    width: 100%;
+  }
     
     /* Set minimum width for the left sidebar container */
     .left-aside {
@@ -451,7 +437,7 @@ footer {
         width: 100%;
       order: 2; /* Move the left sidebar to the bottom */
       align-self: flex-start;
-      display: block;
+      display:flex;
     }
 
     .left-aside ul {
@@ -473,6 +459,25 @@ footer {
   .right-sidebar2 .country-list h3 {
     text-align: center;
   }
+
+  .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .category img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px;
+    border: solid black 4px;
+  }
+  
+  .category h2 {
+    margin-top: 10px;
+    text-align: center;
+  }
   }
   
   /* Style for screens larger than 1200px */
@@ -488,4 +493,10 @@ footer {
     }
 
     
+  }
+
+  @media (max-width: 480px) {
+    .box h2 { 
+      font-size: 14px; /* Further adjusted font size for smaller screens */
+    }
   }
