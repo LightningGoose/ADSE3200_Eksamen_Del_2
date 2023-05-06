@@ -286,121 +286,206 @@ nav > div.login-register a:hover {
     margin-left: auto; /* Push the right-aligned lists to the right */
 }
 
+
+/* Footer styles */
+footer {
+    background-color: #f5f5f5;
+    padding: 20px 10%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+    width: 30%;
+  }
+  
+  .footer-links a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+
   
 /* Style for bigger screens */
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .content .box {
       flex-grow: 1;
       margin-right: 20px;
       max-width: 500px;
     }
+    
+    .main {
+      justify-content: center;
+    }
+    
+    /* Show the list container */
+    #list-container.hidden {
+      display: block;
+    }
   }
   
-/* Style for smaller screens */
+  /* Style for smaller screens */
   @media (max-width: 767px) {
     .content .box {
       flex-basis: 100%;
       margin-right: 0;
       break-inside: avoid;
     }
+    
     .main {
       display: block;
     }
+    
     .main .box {
       flex-basis: 100%;
       width: 100%;
     }
+    
     .box h2 {
       width: 100%;
     }
-    .left-aside {
-      order: 3;
-      width: 100%;
-      margin: 0;
-    }
-    .right-sidebar {
-      order: 2;
-      width: 100%;
-      margin: 0;
-    }
-    .left-aside,
-    .right-sidebar {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+    
+
+
+    .right-sidebar #list-container {
+        display: none;
+      }
+    
     footer {
       grid-template-columns: 1fr;
     }
+    
     nav {
       flex-direction: column;
       align-items: center;
     }
-  
+    
     .search-form {
       margin: 0;
       width: 100%;
     }
-  
+    
     nav > div.login-register {
       margin-top: 20px;
     }
-
-
-    #list {
-        flex-direction: column; /* Switch to a single column layout */
-      }
-      
-      #list li {
-        flex-basis: 100%; /* Set each list item to take full width in a single column */
-        margin-left: 0; /* Remove left margin in single column layout */
-        margin-right: 0; /* Remove right margin in single column layout */
-      }
-
-      .spacer {
-        flex-grow: 2;
-      }
     
+    #list {
+      flex-direction: column; /* Switch to a single column layout */
+    }
+    
+    #list li {
+      flex-basis: 100%; /* Set each list item to take full width in a single column */
+      margin-left: 0; /* Remove left margin in single column layout */
+      margin-right: 0; /* Remove right margin in single column layout */
+    }
+    
+    .spacer {
+      flex-grow: 2;
+    }
   }
   
+  /* Style for screens smaller than 1200px */
+  @media (max-width: 1200px) {
+    /* Center the main container */
+    .main {
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+    
+    /* Adjust the width of the main content */
+    .main-content {
+      width: 100%;
+    }
+    
+    /* Adjust the width of the right sidebar */
+    .right-sidebar {
+      display: none; /* Hide the right-sidebar */
+    }
+    
+    
+    /* Show the list container */
+    #list-container.hidden {
+      display: block;
+    }
+    
+    /* Show the list */
+    #list-container.hidden ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Display list items in 2 columns */
+      grid-gap: 20px; /* Add gap between list items */
+    }
+    
+    /* Adjust the width of the list items */
+    #list-container.hidden li {
+      flex-basis: initial;
+      margin-bottom: 0;
+    }
+    
+    /* Set minimum width for the left sidebar container */
+    .left-aside {
+        text-align: center;
+        box-shadow: none;
+        padding-top: 20px;
+        border-top: solid black 1px;
+        width: 100%;
+      order: 2; /* Move the left sidebar to the bottom */
+      align-self: flex-start;
+      display: block;
+    }
 
+    .left-aside ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Display list items in three columns */
+        grid-gap: 0px; /* Add gap between list items */
+      }
+
+    .right-sidebar2 ul,
+  .right-sidebar2 li {
+    display: none;
+  }
   
+  .right-sidebar2 {
+    border-bottom: solid black 1px;
+    margin: 0;
+  }
+
+  .right-sidebar2 .country-list h3 {
+    text-align: center;
+  }
+  }
   
-/* Footer styles */
-footer {
-  background-color: #f5f5f5;
-  padding: 20px 10%;
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  justify-content: center;
-  align-items: center;
-}
+  /* Style for screens larger than 1200px */
+  @media (min-width: 1200px) {
+    /* Show the right-sidebar */
+    .right-sidebar {
+      display: block;
+    }
+    
+    /* Hide the right-sidebar2 */
+    .right-sidebar2 {
+      display: none;
+    }
 
-.footer-links ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.footer-links li {
-  margin-bottom: 10px;
-  width: 30%;
-}
-
-.footer-links a {
-  color: #333;
-  text-decoration: none;
-}
-
-.footer-bottom {
-  margin-top: 20px;
-  text-align: center;
-  width: 100%;
-}
+    
+  }
