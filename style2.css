@@ -8,10 +8,17 @@
   /* Set some basic styles for the page */
   body {
     font-family: Arial, sans-serif;
-    background-color: #006699;
+    background-color: #ffffff;
     color: #333;
     margin: 0;
     padding: 0;
+    max-width: 1200px;
+    display: block;
+    place-items: center;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    margin: 0 auto; /* Add auto margin to center the page */
+    border: solid black;
   }
   
   /* Header styles */
@@ -32,6 +39,7 @@ nav {
   text-align: center;
   display: flex;
   align-items: center;
+  border-bottom: solid black;
 }
   
   nav a {
@@ -71,7 +79,6 @@ nav > div.login-register a:hover {
 /* Search form styles */
 .search-form {
   display: inline-block;
-  
   flex-grow: 1;
 }
 .search-form input[type="text"] {
@@ -101,17 +108,21 @@ nav > div.login-register a:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     padding: 20px;
     width: 200px;
+    align-self: flex-start;
   }
 
-  .calander {
-    margin-bottom: 8%;
+  .left-aside h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 
   .left-aside ul {
     list-style-type: none;
     padding: 0;
     margin-top: 1%;
+    overflow-y: auto;
   }
+  
   .left-aside li {
     line-height: 1.5em;
     margin-bottom: 10px;
@@ -133,7 +144,7 @@ nav > div.login-register a:hover {
   }
   .country-list h3 {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .country-list ul {
     list-style: none;
@@ -141,7 +152,8 @@ nav > div.login-register a:hover {
     margin: 0;
   }
   .country-list li {
-    margin-bottom: 5px;
+    line-height: 1.5em;
+    margin-bottom: 10px;
   }
   .country-list a {
     text-decoration: none;
@@ -165,58 +177,115 @@ nav > div.login-register a:hover {
   margin: 20px;
 }
 
-.main section {
-  flex: 1;
-  order: 0;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Set the container height to the full viewport height */
+}
+
+.main-content {
+    flex: 1;
   padding: 20px;
-  margin-left: 3%;
-  margin-right: 3%;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
-.content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: 100%;
+.categories {
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+    align-content: flex-start; /* Start aligning boxes from the top */
 }
 
-  .box-container {
+.category {
+    flex: 1;
+    background-color: lightblue;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Add margin-bottom for spacing */
+    min-width: 0; /* Allow boxes to shrink when zoomed in */
+    transition: background-color 0.3s ease; /* Add transition effect */
+    cursor: pointer; /* Add cursor pointer on hover */
+}
+
+.category:hover {
+    background-color: lightgreen; /* Light up on hover */
+}
+
+.spacer {
+    flex-grow: 1;
+  }
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Distribute available space evenly among the category boxes */
+    max-width: 100px; /* Set a specific width for the box */
+}
+
+.box h2 {
+    margin-bottom: 10px;
+    font-size: medium;
+}
+
+.box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none; /* Hide the list initially */
+}
+
+.list {
+    columns: 3; /* Split list into 3 columns */
+}
+
+#list-container {
+    width: 100%;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-  }
-  
-.box {
-  flex: 1;
-  flex-grow: 1;
-  background-color: #fff;
-  box-shadow: 0 3 10px rgba(0,0,0,0.3);
-  padding: 0px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-  min-width: 200px;
 }
 
- 
-  
-  .box h2 {
-    margin-top: 0;
-    font-size: 24px;
-    text-align: center;
-    background-color: #e6e6e6; /* add a background color */
-    padding: 10px; /* add padding */
-    box-sizing: border-box; /* include padding in total height */
-  }
-  
-
-  .box img {
+#list {
     width: 100%;
-    max-width: 1000px;
-  }
+    max-width: 680px; /* Adjust the maximum width as needed */
+    list-style: none;
+    padding: 0; /* Remove any default padding */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#list li {
+    margin-bottom: 20px; /* Increase the spacing between list items */
+    flex-basis: calc((100% - 40px) / 3); /* Set width for each list item */
+    text-align: center;
+    list-style: none;
+    position: relative;
+}
+
+#list li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+
+#list li:nth-child(4) ~ li {
+    margin-left: auto; /* Push the right-aligned lists to the right */
+}
+
   
 /* Style for bigger screens */
   @media (min-width: 768px) {
@@ -277,6 +346,22 @@ nav > div.login-register a:hover {
     nav > div.login-register {
       margin-top: 20px;
     }
+
+
+    #list {
+        flex-direction: column; /* Switch to a single column layout */
+      }
+      
+      #list li {
+        flex-basis: 100%; /* Set each list item to take full width in a single column */
+        margin-left: 0; /* Remove left margin in single column layout */
+        margin-right: 0; /* Remove right margin in single column layout */
+      }
+
+      .spacer {
+        flex-grow: 2;
+      }
+    
   }
   
 
