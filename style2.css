@@ -35,10 +35,16 @@ header {
     margin-right: auto;
   }
   
-  h1 {
+  h1 a {
     margin: 0;
+    text-decoration: none;
+    color: white;
   }
   
+  a {
+    text-decoration: none;
+  }
+
   /* Navigation styles */
   nav {
     display: flex;
@@ -182,6 +188,8 @@ header {
     font-size: 14px;
     background-color: #f5f5f5;
   }
+
+  
 
   /* Main container styles */
 .main {

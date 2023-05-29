@@ -1,292 +1,294 @@
  /* Reset some default browser styles */
  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Set some basic styles for the page */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #006699;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Header styles */
-  header {
-    background-color: #006699;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    
-  }
-  
-/* Navigation styles */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set some basic styles for the page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  max-width: 1200px;
+  display: block;
+  place-items: center;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  margin: 0 auto; /* Add auto margin to center the page */
+  border: solid black;
+}
+/* Header styles */
+header {
+  background-color: #006699;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Add this line */
+}
+
+.header-left {
+  margin-right: auto;
+}
+
+h1 {
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
 /* Navigation styles */
 nav {
-  background-color: #ffffff;
-  padding: 20px;
-  overflow: hidden;
-  text-align: center;
   display: flex;
   align-items: center;
 }
-  
-  nav a {
-    display: inline-block;
-    color: #333;
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  nav a:hover {
-    background-color: #fff;
-  }
-  
-/* Login and Register buttons */
-nav > div.login-register {
-  float: right;
-  margin-left: 10px;
-}
-
-nav > div.login-register a {
-  background-color: #333;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px;
-  
-}
-
-nav > div.login-register a:hover {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #333;
-}
-
-  
-
 
 /* Search form styles */
 .search-form {
-  display: inline-block;
-  
   flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; /* Add this line */
 }
+
 .search-form input[type="text"] {
   padding: 10px;
-  border: solid #333 2px;
-  border-radius: 5px;
+  border: solid #333 2px 2px 2px 2px;
+  border-radius: 15px 0px 0px 15px;
   font-size: 14px;
   width: 70%;
-  margin: 0;
 }
+
 .search-form button[type="submit"] {
   background-color: #006699;
   color: #fff;
   border: solid #333 2px;
-  border-radius: 5px;
+  border-radius: 0px 15px 15px 0px;
   padding: 10px 20px;
   font-size: 14px;
   cursor: pointer;
-  margin: 0;
+  
 }
-  
-  
-  /* Left sidebar styles */
-  .left-aside {
-    order: -1;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    padding: 20px;
-    width: 200px;
-  }
 
-  .calander {
-    margin-bottom: 8%;
-  }
+/* Login and Register buttons */
+nav > .login-register {
+  margin-left: 10px;
+  margin-right: 0; /* Add this line */
+}
 
-  .left-aside ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 1%;
-  }
-  .left-aside li {
-    line-height: 1.5em;
-    margin-bottom: 10px;
-  }
+nav > .login-register a {
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+}
 
+nav > .login-register a:hover {
+  background-color: #fff;
+  color: #333;
+  border: none;
+}
 
-  
-  /* Right sidebar styles */
-  .right-sidebar {
-    order: 1;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    padding: 20px;
-    width: 200px;
-  }
-  
-  .country-list {
-    margin-bottom: 20px;
-  }
-  .country-list h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  .country-list ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .country-list li {
-    margin-bottom: 5px;
-  }
-  .country-list a {
-    text-decoration: none;
-    color: #333;
-  }
-  .country-dropdown {
-    margin-bottom: 20px;
-  }
-  .country-dropdown select {
-    width: 100%;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    background-color: #f5f5f5;
-  }
+/* Login and Register buttons */
+nav > .login-register {
+  margin-left: 10px;
+}
 
-  /* Main container styles */
+nav > .login-register a {
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav > .login-register a:hover {
+  background-color: #fff;
+  color: #333;
+  border: none;
+}
+
+/* Main container styles */
 .main {
-  display: flex;
-  margin: 20px;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto; /* Add 'auto' margin to center the main container horizontally */
+  max-width: 1200px; /* Move max-width property from body to .main */
 }
 
-.main section {
-  flex: 1;
-  order: 0;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  padding: 20px;
-  margin-left: 3%;
-  margin-right: 3%;
-}
-
-.content {
+.profile-section {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  height: 100%;
+  margin: 2%;
 }
 
-  .box-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-  }
-  
-.box {
-  flex: 1;
-  flex-grow: 1;
-  background-color: #fff;
-  box-shadow: 0 3 10px rgba(0,0,0,0.3);
-  padding: 0px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-  min-width: 200px;
+.profile-left {
+  display: flex;
+  align-items: center;
 }
 
- 
-  
-  .box h2 {
-    margin-top: 0;
-    font-size: 24px;
-    text-align: center;
-    background-color: #e6e6e6; /* add a background color */
-    padding: 10px; /* add padding */
-    box-sizing: border-box; /* include padding in total height */
-  }
-  
+.profile-image {
+  width: 150px;
+  height: 200px;
+  margin-right: 20px;
+}
 
-  .box img {
-    width: 100%;
-    max-width: 1000px;
-  }
-  
-/* Style for bigger screens */
-  @media (min-width: 768px) {
-    .content .box {
-      flex-grow: 1;
-      margin-right: 20px;
-      max-width: 500px;
-    }
-  }
-  
-/* Style for smaller screens */
-  @media (max-width: 767px) {
-    .content .box {
-      flex-basis: 100%;
-      margin-right: 0;
-      break-inside: avoid;
-    }
-    .main {
-      display: block;
-    }
-    .main .box {
-      flex-basis: 100%;
-      width: 100%;
-    }
-    .box h2 {
-      width: 100%;
-    }
-    .left-aside {
-      order: 3;
-      width: 100%;
-      margin: 0;
-    }
-    .right-sidebar {
-      order: 2;
-      width: 100%;
-      margin: 0;
-    }
-    .left-aside,
-    .right-sidebar {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    footer {
-      grid-template-columns: 1fr;
-    }
-    nav {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .search-form {
-      margin: 0;
-      width: 100%;
-    }
-  
-    nav > div.login-register {
-      margin-top: 20px;
-    }
-  }
-  
+.profile-table {
+  border-collapse: collapse;
+}
 
-  
-  
+.profile-table td {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+}
+
+.profile-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+button {
+padding: 1%;
+margin-left: 2%;
+}
+
+img {
+width: 200px;
+height: 200px;
+}
+
+h2 {
+  margin-left: 45%
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.listings {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+
+.listing-items {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.listing-item {
+  margin: 10px;
+  text-align: center;
+}
+
+.listing-item img {
+  width: 200px;
+}
+
+.listing-item h3 {
+  margin-top: 10px;
+}
+
+.listing-item p {
+  margin: 5px 0;
+}
+
+.listing-item span {
+  font-weight: bold;
+}
+
+.listing-item button {
+  margin-top: 10px;
+}
+
+.profiles {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+
+.settings {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+button {
+padding: 1%;
+margin-left: 2%;
+}
+
+img {
+width: 150px;
+height: 200px;
+}
+
+h2 {
+  margin-left: 45%
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.listings {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+
+.listing-items {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.listing-item {
+  margin: 10px;
+  text-align: center;
+}
+
+.listing-item img {
+  width: 200px;
+}
+
+.listing-item h3 {
+  margin-top: 10px;
+}
+
+.listing-item p {
+  margin: 5px 0;
+}
+
+.listing-item span {
+  font-weight: bold;
+}
+
+.listing-item button {
+  margin-top: 10px;
+}
+
+
+
 /* Footer styles */
 footer {
   background-color: #f5f5f5;
   padding: 20px 10%;
-  margin-top: 50px;
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -318,4 +320,167 @@ footer {
   margin-top: 20px;
   text-align: center;
   width: 100%;
+}
+
+
+/* Style for smaller screens */
+@media (max-width: 767px) {
+  .content .box {
+    flex-basis: 100%;
+    margin-right: 0;
+    break-inside: avoid;
+  }
+  
+  .main {
+    display: block;
+  }
+  
+  .main .box {
+    flex-basis: 100%;
+    width: 100%;
+  }
+  
+  .box h2 {
+    width: 100%;
+    font-size: 14px; /* Adjusted font size for smaller screens */
+  }
+
+  .right-sidebar #list-container {
+      display: none;
+    }
+  
+  footer {
+    grid-template-columns: 1fr;
+  }
+  
+  
+  nav > div.login-register {
+    margin-top: 20px;
+  }
+  
+  #list {
+    flex-direction: column; /* Switch to a single column layout */
+  }
+  
+  #list li {
+    flex-basis: 100%; /* Set each list item to take full width in a single column */
+    margin-left: 0; /* Remove left margin in single column layout */
+    margin-right: 0; /* Remove right margin in single column layout */
+  }
+  
+  .spacer {
+    flex-grow: 2;
+  }
+}
+
+/* Style for screens smaller than 1200px */
+@media (max-width: 1200px) {
+  /* Center the main container */
+  .main {
+    justify-content: flex-start;
+    flex-direction: column;
+    display: flex;
+  }
+  
+  /* Adjust the width of the main content */
+  .main-content {
+    width: 100%;
+  }
+  
+  /* Adjust the width of the right sidebar */
+  .right-sidebar {
+    display: none; /* Hide the right-sidebar */
+  }
+  
+  
+  /* Show the list container */
+  .hidden {
+    display: block;
+    justify-content: center;
+  }
+  
+  /* Show the list */
+  .hidden ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  grid-gap: 20px;
+}
+
+.hidden li {
+  margin: 0;
+  width: 100%;
+}
+  
+  /* Set minimum width for the left sidebar container */
+  .left-aside {
+      text-align: center;
+      box-shadow: none;
+      padding-top: 20px;
+      border-top: solid black 1px;
+      width: 100%;
+    order: 2; /* Move the left sidebar to the bottom */
+    align-self: flex-start;
+    display:flex;
+  }
+
+  .left-aside ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Display list items in three columns */
+      grid-gap: 0px; /* Add gap between list items */
+    }
+
+  .right-sidebar2 ul,
+.right-sidebar2 li {
+  display: none;
+}
+
+.right-sidebar2 {
+  border-bottom: solid black 1px;
+  margin: 0;
+}
+
+.right-sidebar2 .country-list h3 {
+  text-align: center;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.category img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 30px;
+  border: solid black 4px;
+}
+
+.category h2 {
+  margin-top: 10px;
+  text-align: center;
+}
+}
+
+/* Style for screens larger than 1200px */
+@media (min-width: 1200px) {
+  /* Show the right-sidebar */
+  .right-sidebar {
+    display: block;
+  }
+  
+  /* Hide the right-sidebar2 */
+  .right-sidebar2 {
+    display: none;
+  }
+
+  
+}
+
+@media (max-width: 480px) {
+  .box h2 { 
+    font-size: 14px; /* Further adjusted font size for smaller screens */
+  }
 }
