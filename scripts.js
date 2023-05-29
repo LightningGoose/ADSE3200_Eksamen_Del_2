@@ -186,3 +186,25 @@ function showList(category) {
     // Show the list container
     listContainer.style.display = "block";
 }
+
+
+
+// Get all the table rows
+const rows = document.querySelectorAll('.favorites-table tr');
+
+// Add event listeners to the checkboxes in each row
+rows.forEach((row) => {
+  const checkboxes = row.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('click', () => {
+      if (checkbox.checked) {
+        // Uncheck all checkboxes in the row except for the clicked checkbox
+        checkboxes.forEach((checkboxInRow) => {
+          if (checkboxInRow !== checkbox) {
+            checkboxInRow.checked = false;
+          }
+        });
+      }
+    });
+  });
+});

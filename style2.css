@@ -69,7 +69,7 @@ header {
   }
   
   .search-form button[type="submit"] {
-    background-color: #006699;
+    background-color: #333;
     color: #fff;
     border: solid #333 2px;
     border-radius: 0px 15px 15px 0px;
@@ -144,6 +144,10 @@ header {
   .left-aside li {
     line-height: 1.5em;
     margin-bottom: 10px;
+  }
+
+  .left-aside a {
+    color: black;
   }
 
 
@@ -227,7 +231,7 @@ header {
 }
 
 .category:hover {
-    background-color: lightgreen; /* Light up on hover */
+    background-color: rgb(144, 188, 238); /* Light up on hover */
 }
 
 .spacer {
@@ -306,6 +310,8 @@ header {
 #list li:nth-child(4) ~ li {
     margin-left: auto; /* Push the right-aligned lists to the right */
 }
+
+
 
 
 /* Footer styles */

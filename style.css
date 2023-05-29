@@ -64,7 +64,7 @@ nav {
 }
 
 .search-form button[type="submit"] {
-  background-color: #006699;
+  background-color: #333;
   color: #fff;
   border: solid #333 2px;
   border-radius: 0px 15px 15px 0px;
@@ -115,18 +115,24 @@ nav > .login-register a:hover {
 
 /* Main container styles */
 .main {
-  display: block;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin: 20px auto; /* Add 'auto' margin to center the main container horizontally */
   max-width: 1200px; /* Move max-width property from body to .main */
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+}
+
 .profile-section {
   display: flex;
   justify-content: space-between;
-  margin: 2%;
+  margin-top: 20px;
 }
 
 .profile-left {
@@ -149,17 +155,37 @@ nav > .login-register a:hover {
   border: 1px solid #ccc;
 }
 
-.profile-right {
+.settings {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  margin-top: 20px;
 }
+
+.settings button {
+  margin-bottom: 10px;
+}
+
+
 
 
 
 button {
 padding: 1%;
 margin-left: 2%;
+background-color: #333;
+  color: #fff;
+  border: solid #333 2px;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.main > button a:hover {
+  background-color: #fff;
+  color: #333;
+  border: none;
 }
 
 img {
@@ -167,9 +193,7 @@ width: 200px;
 height: 200px;
 }
 
-h2 {
-  margin-left: 45%
-}
+
 
 a {
   text-decoration: none;
@@ -235,8 +259,11 @@ width: 150px;
 height: 200px;
 }
 
-h2 {
-  margin-left: 45%
+.home-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust the margin value to position the button vertically */
+  margin-bottom: 20px;
 }
 
 a {
